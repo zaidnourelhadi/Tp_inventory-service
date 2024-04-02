@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Add Video</title>
+</head>
+<body>
+<h1>Add Video</h1>
+<form action="#" th:action="@{/videosadd}"  method="post">
+  <input type="text" th:field="*{name}" placeholder="Video Name"/>
+  <input type="text" th:field="*{url}" placeholder="Video URL"/>
+  <input type="text" th:field="*{description}" placeholder="Video Description"/>
+  <button type="submit">Add Video</button>
+</form>
+</body>
+</html>

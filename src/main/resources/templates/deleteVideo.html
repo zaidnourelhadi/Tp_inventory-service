@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmer la suppression de la vidéo</title>
+</head>
+<body>
+<h1>Confirmer la suppression de la vidéo</h1>
+<p>Êtes-vous sûr de vouloir supprimer la vidéo suivante :</p>
+<p><strong>Nom :</strong> {name}</p>
+<p><strong>URL :</strong> {url}</p>
+<p><strong>Description :</strong> {description}</p>
+<p><strong>Date de publication :</strong> {datePublication}</p>
+<form method="post" action="/videos/{id}/delete">
+  <input type="hidden" id="id" name="id" value="{id}">
+  <button type="submit">Confirmer la suppression</button>
+</form>
+<a href="/videos">Annuler</a>
+</body>
+</html>
